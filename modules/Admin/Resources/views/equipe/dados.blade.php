@@ -43,27 +43,8 @@
                                         <textarea name="descricao" id="summernote_1">{{ $dados->descricao or old('descricao') }}</textarea>
                                     </div>
 
-                                    @if(!empty($destacada->imagem_destacada))
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <label class="control-label">Imagem Destacada</label>
-                                                    <div class="thumbnail">
-                                                        <div class="thumbnail">
-                                                            <img src="{{ url('uploads/equipe/' . $destacada->imagem_destacada) }}" class="img-responsive form-control">
-                                                        </div>
-                                                        <a href="{{ url('uploads/equipe/' . $destacada->imagem_destacada) }}" download="{{ $destacada->imagem_destacada }}" class="btn btn-default" role="button" title="Download"><i class="fa fa-download"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    @include('admin::static.field-img-destacada', ['tipo' => 'equipe'])
 
-                                        </div>
-                                    @endif
-
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagem') }}" name="imagem">
-                                    </div>
                                 </div>
 
 

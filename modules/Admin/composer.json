@@ -1,10 +1,10 @@
 {
-	"name": "pingpong-modules/admin",
+	"name": "lovera180/admin",
 	"description": "",
 	"authors": [
 		{
-			"name": "Pingpong Labs",
-			"email": "pingpong.labs@gmail.com"
+			"name": "Pablo Lovera",
+			"email": "pablolovera180@gmail.com"
 		}
 	],
 	"autoload": {

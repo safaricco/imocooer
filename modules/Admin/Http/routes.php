@@ -8,7 +8,7 @@ Route::group([
 
 		Route::get('/', function () { return Redirect::to('admin/dashboard'); });
 		Route::get('home', function (){ return redirect('admin/dashboard');});
-		Route::get('dashboard', 'Admin\Dashboard@index');
+
 		Route::get('login', 'Admin\Login@index');
 		Route::post('login/logar', 'Admin\Login@logar');
 
@@ -26,6 +26,7 @@ Route::group([
 //	Route::group(['prefix' => 'admin/', 'middleware' => 'auth.aux'], function(){
 	Route::group(['middleware' => 'auth.aux'], function(){
 
+		Route::get('dashboard', 'Admin\Dashboard@index');
 
 
 		// ROTA PARA EXLUIR QUALQUER FOTO ÚNICA NA TABELA MULTIMIDIA, SERVE PARA QUALQUER CONTROLLER

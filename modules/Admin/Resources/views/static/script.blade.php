@@ -1,44 +1,44 @@
-<script src="{{asset('assets/admin/global/plugins/jquery.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/jquery-migrate.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/jquery.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/jquery-migrate.min.js')}}" type="text/javascript"></script>
 
-<script src="{{asset('assets/admin/global/plugins/jquery-ui/jquery-ui.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/jquery.blockui.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/jquery.cokie.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/jquery-ui/jquery-ui.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/jquery.blockui.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/jquery.cokie.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 
 
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/select2/select2.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/select2/select2.min.js')}}"></script>
 {{--<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js')}}"></script>--}}
 {{--<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js')}}"></script>--}}
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/jquery-mixitup/jquery.mixitup.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/fancybox/source/jquery.fancybox.pack.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/bootstrap-markdown/lib/markdown.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/bootstrap-summernote/summernote.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/jquery-mixitup/jquery.mixitup.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/fancybox/source/jquery.fancybox.pack.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/bootstrap-markdown/lib/markdown.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/bootstrap-markdown/js/bootstrap-markdown.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/bootstrap-summernote/summernote.min.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/datatables/media/js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js')}}"></script>
+<script type="text/javascript" src="{{ Module::asset('admin:global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js')}}"></script>
 
 
-<script src="{{asset('assets/admin/global/scripts/metronic.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/admin/layout/scripts/layout.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/admin/layout/scripts/quick-sidebar.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/admin/layout/scripts/demo.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/admin/admin/pages/scripts/form-samples.js')}}"></script>
-<script src="{{asset('assets/admin/admin/pages/scripts/portfolio.js')}}"></script>
-<script src="{{asset('assets/admin/admin/pages/scripts/components-editors.js')}}"></script>
-<script src="{{asset('assets/admin/admin/pages/scripts/profile.js')}}"></script>
-<script src="{{asset('assets/admin/admin/pages/scripts/table-advanced.js')}}"></script>
+<script src="{{ Module::asset('admin:global/scripts/metronic.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:admin/layout/scripts/layout.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:admin/layout/scripts/quick-sidebar.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:admin/layout/scripts/demo.js')}}" type="text/javascript"></script>
+<script src="{{ Module::asset('admin:admin/pages/scripts/form-samples.js')}}"></script>
+<script src="{{ Module::asset('admin:admin/pages/scripts/portfolio.js')}}"></script>
+<script src="{{ Module::asset('admin:admin/pages/scripts/components-editors.js')}}"></script>
+<script src="{{ Module::asset('admin:admin/pages/scripts/profile.js')}}"></script>
+<script src="{{ Module::asset('admin:admin/pages/scripts/table-advanced.js')}}"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script>

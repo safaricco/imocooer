@@ -168,7 +168,7 @@ class Noticias extends Controller
             try {
                 $noticia                    = Noticia::findOrFail($id);
 
-                $noticia->id_subcategoria   = $request->id_subcategoria;
+                $noticia->id_subcasategoria   = $request->id_subcategoria;
                 $noticia->titulo            = $request->titulo;
                 $noticia->resumo            = $request->resumo;
                 $noticia->tags              = $request->tags;

@@ -247,16 +247,9 @@
 
                                     </div>
 
+                                    @include('admin::static.field-img-destacada', ['tipo' => 'imoveis'])
 
-
-
-
-                                    @include('admin::static.field-img-atual', ['tipo' => 'produtos'])
-
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagens[]') }}" name="imagens[]" multiple>
-                                    </div>
+                                    @include('admin::static.field-img-atual', ['tipo' => 'imoveis'])
 
                                 </div>
 

@@ -46,12 +46,8 @@
                                         <input name="link" type="text" class="form-control" placeholder="Link" value="{{ $dados->link or old('link') }}">
                                     </div>
 
-                                    @include('admin::static.field-img-atual', ['tipo' => 'banners'])
 
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagem') }}" name="imagem">
-                                    </div>
+                                    @include('admin::static.field-img-atual', ['tipo' => 'banners'])
                                 </div>
 
 

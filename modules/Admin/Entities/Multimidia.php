@@ -17,46 +17,59 @@ class Multimidia extends Model
 
     public static function excluir($idMultimidia)
     {
-        $multimidia = Multimidia::findOrFail($idMultimidia);
+        try {
+            $multimidia = Multimidia::findOrFail($idMultimidia);
 
-        $tipoMidia  = TipoMidia::findOrFail(Midia::find($multimidia->id_midia)->id_tipo_midia);
+            $tipoMidia  = TipoMidia::findOrFail(Midia::find($multimidia->id_midia)->id_tipo_midia);
 
-        Multimidia::excluirThumb($tipoMidia->descricao, $multimidia->imagem);
+            Multimidia::excluirThumb($tipoMidia->descricao, $multimidia->imagem);
 
-        unlink('uploads/'. $tipoMidia->descricao . '/' . $multimidia->imagem);
+            unlink('uploads/'. $tipoMidia->descricao . '/' . $multimidia->imagem);
 
-        Multimidia::destroy($idMultimidia);
+            Multimidia::destroy($idMultimidia);
+
+        } catch (\Exception $e) {
+
+            LogR::exception('excluir multimidia', $e);
+
+        }
     }
 
     public static function excluirThumb($tipo, $img)
     {
-        $diretorio = public_path()."/uploads/" . $tipo . '/';
+        try{
+            $diretorio = public_path()."/uploads/" . $tipo . '/';
 
-        $arquivos = new \DirectoryIterator($diretorio);
+            $arquivos = new \DirectoryIterator($diretorio);
 
-        $cont = 1;
+            $cont = 1;
 
-        foreach ($arquivos as $arquivo) :
+            foreach ($arquivos as $arquivo) :
 
-            if ($arquivo != '..' || $arquivo != '.') :
+                if ($arquivo != '..' || $arquivo != '.') :
 
-                if (!is_dir($arquivo)) :
+                    if (!is_dir($arquivo)) :
 
-                    $nomeImagem = $arquivo->getFilename();
+                        $nomeImagem = $arquivo->getFilename();
 
-                    $im = explode('_', $nomeImagem);
+                        $im = explode('_', $nomeImagem);
 
-                    if (count($im) > 1) :
-                        if ($im[1] == $img) :
-                            unlink('uploads/'. $tipo . '/' . $nomeImagem);
+                        if (count($im) > 1) :
+                            if ($im[1] == $img) :
+                                unlink('uploads/'. $tipo . '/' . $nomeImagem);
+                            endif;
                         endif;
+
                     endif;
-
                 endif;
-            endif;
 
-            $cont = $cont +1;
+                $cont = $cont +1;
 
-        endforeach;
+            endforeach;
+        } catch (\Exception $e) {
+
+            LogR::exception('excluirThumb multimidia', $e);
+
+        }
     }
 }

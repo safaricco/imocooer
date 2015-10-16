@@ -51,7 +51,7 @@
                 </li>
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                        <img alt="" class="img-circle" src="{{ url('assets/admin/admin/pages/media/sem-imagem.png') }}"/>
+                        <img alt="" class="img-circle" src="{{  Module::asset('admin:admin/pages/media/sem-imagem.png') }}"/>
 					    <span class="username username-hide-on-mobile">{{ Auth::user()->name }}</span>
                         <i class="fa fa-angle-down"></i>
                     </a>

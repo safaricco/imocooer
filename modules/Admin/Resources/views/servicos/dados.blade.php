@@ -77,36 +77,9 @@
                                         </div>
                                     </div>
 
-                                    @if(!empty($destacada->imagem_destacada))
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="control-label">Imagem Destacada</label>
-                                                <div class="col-xs-6 col-md-3">
-                                                    <div class="thumbnail">
-                                                        <div class="thumbnail">
-                                                            <img src="{{ url('uploads/servicos/' . $destacada->imagem_destacada) }}" class="img-responsive form-control">
-                                                        </div>
-                                                        <a href="{{ url('uploads/servicos/' . $destacada->imagem_destacada) }}" download="{{ url('uploads/servicos/' . $destacada->imagem_destacada) }}" class="btn btn-default" role="button" title="Download"><i class="fa fa-download"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    @endif
-
-                                    <div class="form-group">
-                                        <label class="control-label">Imagem Destacada</label>
-                                        <input type="file" value="{{ old('imagem') }}" name="imagem">
-                                    </div>
-
-                                    <hr>
+                                    @include('admin::static.field-img-destacada', ['tipo' => 'servicos'])
 
                                     @include('admin::static.field-img-atual', ['tipo' => 'servicos'])
-
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagens[]') }}" name="imagens[]" multiple>
-                                    </div>
 
                                 </div>
 

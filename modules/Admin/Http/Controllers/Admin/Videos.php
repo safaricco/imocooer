@@ -98,7 +98,6 @@ class Videos extends Controller
         endif;
     }
 
-
     public function show($id)
     {
         try {

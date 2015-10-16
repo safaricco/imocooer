@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Modules\Admin\Entities\LogR;
+use Modules\Admin\Entities\Midia;
 use Modules\Admin\Entities\Programa;
 use Pingpong\Modules\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -94,10 +95,11 @@ class Programas extends Controller
     public function show($id)
     {
         try {
-            $dados['imagens'] = Midia::imagens($this->tipo_midia, $id);
-            $dados['put'] = true;
-            $dados['dados'] = Programa::findOrFail($id);
-            $dados['route'] = 'admin/programas/atualizar/' . $id;
+            $dados['destacada'] = Midia::destacada($this->tipo_midia, $id);
+            $dados['imagens']   = Midia::imagens($this->tipo_midia, $id);
+            $dados['put']       = true;
+            $dados['dados']     = Programa::findOrFail($id);
+            $dados['route']     = 'admin/programas/atualizar/' . $id;
 
             return view('admin::programas/dados', $dados);
 

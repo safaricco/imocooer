@@ -99,6 +99,7 @@ class Dicas extends Controller
     public function show($id)
     {
         try {
+            $dados['destacada'] = Midia::destacada($this->tipo_midia, $id);
             $dados['imagens']   = Midia::imagens($this->tipo_midia, $id);
             $dados['put']       = true;
             $dados['dados']     = Dica::findOrFail($id);

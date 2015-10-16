@@ -88,12 +88,9 @@
                                         </select>
                                     </div>
 
-                                    @include('admin::static.field-img-atual', ['tipo' => 'noticias'])
+                                    @include('admin::static.field-img-destacada', ['tipo' => 'noticias'])
 
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagens[]') }}" name="imagens[]" multiple>
-                                    </div>
+                                    @include('admin::static.field-img-atual', ['tipo' => 'noticias'])
                                 </div>
 
 

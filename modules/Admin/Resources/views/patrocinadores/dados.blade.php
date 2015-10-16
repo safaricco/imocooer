@@ -65,12 +65,8 @@
                                         </div>
                                     </div>
 
-                                    @include('admin::static.field-img-atual', ['tipo' => 'patrocinadores'])
 
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" class="form-control" value="{{ old('imagens[]') }}" name="imagens[]" multiple>
-                                    </div>
+                                    @include('admin::static.field-img-atual', ['tipo' => 'patrocinadores'])
                                 </div>
 
 

@@ -41,12 +41,9 @@
                                         <textarea name="texto" id="summernote_1">{{ $dados->texto or old('texto') }}</textarea>
                                     </div>
 
-                                    @include('admin::static.field-img-atual', ['tipo' => 'eventos'])
+                                    @include('admin::static.field-img-destacada', ['tipo' => 'eventos'])
 
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagens') }}" name="imagens[]" multiple>
-                                    </div>
+                                    @include('admin::static.field-img-atual', ['tipo' => 'eventos'])
                                 </div>
 
 

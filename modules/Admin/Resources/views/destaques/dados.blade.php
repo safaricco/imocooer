@@ -49,11 +49,6 @@
 
                                     @include('admin::static.field-img-atual', ['tipo' => 'destaques'])
 
-                                    <div class="form-group">
-                                        <label class="control-label">Imagens</label>
-                                        <input type="file" value="{{ old('imagem') }}" name="imagem">
-                                    </div>
-
                                 </div>
 
                                 <div class="form-actions">

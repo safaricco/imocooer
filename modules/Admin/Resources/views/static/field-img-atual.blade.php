@@ -11,11 +11,11 @@
                         <div class="thumbnail">
                             <div class="thumbnail">
     {{--                                <img src="{{ url('uploads/' . $tipo . '/' . $img->imagem) }}" class="img-responsive">--}}
-                                <img src="{{ url('thumb/348/null/' . $tipo . '/' . $img->imagem) }}" class="img-responsive">
+                                <img src="{{ url('admin/thumb/348/null/' . $tipo . '/' . $img->imagem) }}" class="img-responsive">
                             </div>
-                            <a data-rel="fancybox-button" href="{{ url('uploads/' . $tipo . '/' . $img->imagem) }}" class="btn btn-primary fancybox-button" role="button" title="Visualizar"><i class="fa fa-eye"></i></a>
+                            <a data-rel="fancybox-button" href="{{ Module::asset('admin:uploads/' . $tipo . '/' . $img->imagem) }}" class="btn btn-primary fancybox-button" role="button" title="Visualizar"><i class="fa fa-eye"></i></a>
                             <button type="button" value="{{ $img->id_multimidia }}" data-url="/admin/multimidia/destroyFoto" class="btn btn-success deletefoto" role="button" title="Excluir"><i class="fa fa-remove"></i></button>
-                            <a href="{{ url('uploads/' . $tipo . '/' . $img->imagem) }}" download="{{ url('uploads/' . $tipo . '/' . $img->imagem) }}" class="btn btn-default" role="button" title="Download"><i class="fa fa-download"></i></a>
+                            <a href="{{ Module::asset('admin:uploads/' . $tipo . '/' . $img->imagem) }}" download="{{ $img->imagem }}" class="btn btn-default" role="button" title="Download"><i class="fa fa-download"></i></a>
                         </div>
                     </div>
 
@@ -42,3 +42,8 @@
     </div>
 
 @endif
+
+<div class="form-group">
+    <label class="control-label">Galeria</label>
+    <input type="file" value="{{ old('imagens[]') }}" name="imagens[]" multiple>
+</div>

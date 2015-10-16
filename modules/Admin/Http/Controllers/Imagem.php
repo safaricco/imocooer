@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Modules\Admin\Http\Controllers;
 
-use App\Models\Midia;
-use App\Models\Multimidia;
-use App\Models\TipoMidia;
 use Illuminate\Http\Request;
-use App\Models\Banner;
 
 use App\Http\Requests;
-use Illuminate\Routing\Controller;
+use Modules\Admin\Entities\LogR;
+use Pingpong\Modules\Routing\Controller;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
+use Modules\Admin\Entities\Multimidia;
 
 class Imagem extends Controller
 {
@@ -29,21 +27,29 @@ class Imagem extends Controller
      * */
     public function thumb($width, $height, $tipo, $img)
     {
-        if ( ! is_file('uploads/' . $tipo . '/thumb-' . $width . 'x' . $height . '_' . $img)) :
+        try {
+            if ( ! is_file('modules/admin/uploads/' . $tipo . '/thumb-' . $width . 'x' . $height . '_' . $img)) :
 
-            $image = Image::make('uploads/' . $tipo . '/' . $img);
+                $image = Image::make('modules/admin/uploads/' . $tipo . '/' . $img);
 
-            $image->resize($width, $height,
-                function ($constraint) {
-                    $constraint->aspectRatio(); // mantem a proporção da imagem, se caso a altura ou largura forem nullos
-                    $constraint->upsize();      // não deixa estrourar o tamanho original
+                $image->resize($width, $height,
+                    function ($constraint) {
+                        $constraint->aspectRatio(); // mantem a proporção da imagem, se caso a altura ou largura forem nullos
+                        $constraint->upsize();      // não deixa estrourar o tamanho original
 
-            })->save(public_path() . '/uploads/' . $tipo . '/thumb-' . $width . 'x' . $height . '_' . $img);
+                })->save(public_path() . '/modules/admin/uploads/' . $tipo . '/thumb-' . $width . 'x' . $height . '_' . $img);
 
-        endif;
+            endif;
 
-        header('Content-Type: image/jpg');
-        readfile('uploads/' . $tipo . '/thumb-' . $width . 'x' . $height . '_' . $img);
+            header('Content-Type: image/jpg');
+            readfile('modules/admin/uploads/' . $tipo . '/thumb-' . $width . 'x' . $height . '_' . $img);
+
+        } catch (\Exception $e) {
+
+            LogR::exception('thumn imagem', $e);
+            session()->flash('flash_message', 'Ops!! Ocorreu algum problema!. ' . $e->getMessage());
+
+        }
     }
 
     /*
@@ -54,8 +60,14 @@ class Imagem extends Controller
      * */
     public function destroyFoto(Request $request)
     {
-        Multimidia::excluir($request->id);
+        try {
+            Multimidia::excluir($request->id);
 
-        session()->flash('flash_message', 'Registro apagado com sucesso');
+            session()->flash('flash_message', 'Registro apagado com sucesso');
+        } catch (\Exception $e) {
+
+            LogR::exception('destroyFoto imagem', $e);
+            session()->flash('flash_message', 'Ops!! Ocorreu algum problema!. ' . $e->getMessage());
+        }
     }
 }
